@@ -51,6 +51,13 @@ fixed size embedded types from stdint.h
 
 ## How to Run
 
+======================= Memory Inspector============================
+| Vriable | Value | Address | Size |
+|---|---|
+
+
+
+
 ### Option 1 — Online
 1. Go to [onlinegdb.com](https://onlinegdb.com)
 2. Set language to **C**
