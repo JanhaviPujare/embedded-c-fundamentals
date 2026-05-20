@@ -72,40 +72,40 @@ gcc memory_inspector.c -o memory_inspector
 ================= Memory Inspector =================
 
 Variable     Value        Address          Size
-------------------------------------------------
+____________________________________________________
 char a       74           0x7fff7fe831fb   1 bytes
 int b        1234         0x7fff7fe831f4   4 bytes
 float c      3.141000     0x7fff7fe831f0   4 bytes
 long d       123456       0x7fff7fe831e8   8 bytes
-------------------------------------------------
+____________________________________________________
 
 
 === Memory addresses of an integer array elements ===
 
 Index        Value        Address          Size
-------------------------------------------------
+__________________________________________________
 0            10           0x7fff7fe831d0   4 bytes
 1            20           0x7fff7fe831d4   4 bytes
 2            30           0x7fff7fe831d8   4 bytes
 3            40           0x7fff7fe831dc   4 bytes
 4            50           0x7fff7fe831e0   4 bytes
-------------------------------------------------
+__________________________________________________
 
 
 ======Relation Between Pointer and Variable======
-
+_____________________________________
 x value              :42
 x address (&x)       :0x7fff7fe831cc
 ptr contains         :0x7fff7fe831cc
 value ptr points to  :42
 address of ptr       :0x7fff7fe831c0
-------------------------------------------------
+_____________________________________
 
 
 ===========Sizeof different Datatypes===========
 
 Datatype     Size
------------------
+_________________
 char         1
 int          4
 float        4
@@ -114,7 +114,7 @@ long         8
 uint8_t      1
 uint16_t     2
 uint32_t     4
-------------------------------------------------
+_________________
 
 ## Notes
 - The most important insight from this exercise is Part 3; seeing that `&x` and `ptr` contain the exact same address proves that a pointer genuinely points to the original variable, not a copy of it. This is why functions that take pointer parameters can modify the original variable.
