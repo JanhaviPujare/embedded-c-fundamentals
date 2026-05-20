@@ -66,6 +66,40 @@ fixed size embedded types from stdint.h
 gcc memory_inspector.c -o memory_inspector
 ./memory_inspector
 ```
+##sample output
+================= Memory Inspector =================
+Variable     Value        Address          Size
+char a       J            0x7ffd28e626eb   1 bytes
+int b        1234         0x7ffd28e626e4   4 bytes
+float c      3.141000     0x7ffd28e626e0   4 bytes
+long d       123456       0x7ffd28e626d8   8 bytes
+=== Memory addresses of an integer array elements ===
+Index        Value        Address          Size
+0            10           0x7ffd28e626c0   4 bytes
+1            20           0x7ffd28e626c4   4 bytes
+2            30           0x7ffd28e626c8   4 bytes
+3            40           0x7ffd28e626cc   4 bytes
+4            50           0x7ffd28e626d0   4 bytes
+======Relation Between Pointer and Variable======
+x value              :42
+x address (&x)       :0x7ffd28e626bc
+ptr contains         :0x7ffd28e626bc
+value ptr points to  :42
+address of ptr       :0x7ffd28e626b0
+===========Sizeof different Datatypes===========
+Datatype     Size
+char         1
+int          4
+float        4
+double       8
+long         8
+uint8_t      1
+uint16_t     2
+uint32_t     4
+
+
+
+
 
 ## Notes
 - The most important insight from this exercise is Part 3; seeing that `&x` and `ptr` contain the exact same address proves that a pointer genuinely points to the original variable, not a copy of it. This is why functions that take pointer parameters can modify the original variable.
